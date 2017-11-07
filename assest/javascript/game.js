@@ -1,27 +1,38 @@
-  var pokemon = [
-  pickacho, 
-  squirtle, 
-  charmandder, 
-  bulbasaur,
-  treecko, 
-  torchic,
-  mudkip,
-  cyndaquil,
-  totodile,
-  chikorita,  
+ //array of pokemon
+ var pokemon = [
+  'pickacho', 
+  'squirtle', 
+  'charmander', 
+  'bulbasaur',
+  'treecko', 
+  'torchic',
+  'mudkip',
+  'cyndaquil',
+  'totodile',
+  'chikorita',  
   ];
+//choose word randomly 
 
-  var pokemon = pokemon[math.floor(math.random()*pokemon.length)];
+ var randomItem = pokemon[Math.floor(Math.random()*pokemon.length)];
+ var choosenword = randomItem; 	
+ var Underscore =[];
+ 
+console.log(choosenword);
+ //create underscores based on length
+var genrateunderscore = () => {
+	for(var i =0; i < choosenword.length; i++){
+		Underscore.push('_');
+	}
+	return Underscore;
+}
 
-  var answerArray =[]
-  for (var i =0; i<word.length;i++){
-  	answerArray[i]= "_";
-  	console.log(answerArray)
-  }
-
-  var letterleft= pokemon.length 
 
 
 
-
-
+console.log(genrateunderscore());
+ 
+//capture users guess  
+document.addEventListener('keypress', (event) => {
+	var keycode = event.keyCode;
+	console.log(event);
+});

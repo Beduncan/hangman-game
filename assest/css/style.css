@@ -1,54 +1,55 @@
 body{
 	text-align: center;
-	background-color:grey;
-	background-image: url("../images/img2.jpg");
+	background-image: url("../images/img5.jpg");
 	background-size: 100%;
 	height: auto; 
-	color:blue;
+	font-family: Comic Sans MS;
+	font-weight:bold;
+	color: blue;
 }
 
 
 
 
 header{
-	margin-top: 60px;
+	padding: 20px;
 	font-size: 120px;
-	background-color: grey;
-	width:50%;
-	margin-left: 90px;
-	
+	width:100%;
+	background-color: lightgrey;
 	}
 	h1{
-		font-family: Impact;
+		font-family:; 
 		transform: rotate(10deg);
-		color: blue;
+		color: yellow;
+		font-weight: bolder;
 		
 	}
   	h3{ 
  		font-size: 80px;
- 		font-family: Comic Sans MS; 
- 		color:yellow;
+ 		font-family: Comic Sans MS;
+ 		color:blue;
  		margin-top:-40px;
 		padding-bottom: 20px;
- 		border-bottom:  10px solid blue; 
+ 		 
  	}
 
+.container{}
 
-.underscore{
-	margin-top: 50px;
-	font-size: 30px;
-	color: yellow;
+#underscore{
+	margin-top: 100px;
+	font-size: 40px;
+	
 }
 
 .guessesleft{
-	font-size: 30px;
-	margin-top: 50px;
-	color:yellow;
+	font-size: 40px;
+	margin-top: 75px;
+	
 }
 
 .lettersguessed{
-	font-size: 30px;
-	margin-top:50px;
-	color:yellow;
+	font-size: 40px;
+	margin-top:75px;
+	
 }
 
