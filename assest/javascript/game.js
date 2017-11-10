@@ -89,7 +89,7 @@ function winlose()
 	}
 	 		if(rightguess == choosenword.length)
 			{
-				window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+				window.location = 'hangman-game/hangmangamestart.html'; 
 			}
 	//if you lose
 	if(guessesleft === 0)
@@ -98,11 +98,11 @@ function winlose()
 	}
 		if (guessesleft === 0)
 		{
-	    	window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+	    	window.location = 'hangman-game/index.html'; 
 		}
 			if(rightguess == choosenword.length)
 			{
-		 		window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+		 		window.location = 'hangman-game/hangmangamestart.html'; 
 			}
 
 }
