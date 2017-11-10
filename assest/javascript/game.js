@@ -102,5 +102,5 @@ function winlose()
 		}
 
 }
-
-
+//onkeyclose
+}
