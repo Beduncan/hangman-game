@@ -16,9 +16,14 @@
  var Underscores = [];
  var rightguess =0;
  var wrongguess =[];
- var guessesleft = 10;
+ var guessesleft = 11;
  var usersguess = [];  
  var winC = 0;
+
+
+//ready function 
+
+
 
 //choose word randomly 
 choosenword = pokemon[Math.floor(Math.random()*pokemon.length)];
@@ -78,10 +83,20 @@ if(rightguess == choosenword.length){
 	 		alert("You are The Pokemon Champion");
 	 		
 	 	}
-//if you lose 
+//if you lose
+var go = alert 
 if(guessesleft === 0){
 	alert("You are Not The Pokemon Champion")
 }
+if (guessesleft === 0){
+	            window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+
+}
+if(rightguess == choosenword.length){
+		            window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+
+}
+
 
 
 //closeingtag for keypress
