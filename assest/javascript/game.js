@@ -1,76 +1,91 @@
- //array of pokemon
+ //global vari
+
  var pokemon = [
-  'pickacho', 
-  'squirtle', 
-  'charmander', 
-  'bulbasaur',
-  'treecko', 
-  'torchic',
-  'mudkip',
-  'cyndaquil',
-  'totodile',
-  'chikorita',  
-  ];
- var randomItem;
+ 'pickacho', 
+ 'squirtle', 
+ 'charmander', 
+ 'bulbasaur',
+ 'treecko', 
+ 'torchic',
+ 'mudkip',
+ 'cyndaquil',
+ 'totodile',
+ 'chikorita',  
+ ];
+ var choosenword;
  var Underscores = [];
- var rightguess =[];
+ var rightguess =0;
  var wrongguess =[];
  var guessesleft = 10;
  var usersguess = [];  
-///start game 
-function startgame() {
-	// body...
-}
+ var winC = 0;
+
 
 //choose word randomly 
-randomItem = pokemon[Math.floor(Math.random()*pokemon.length)];
-//checking word choose 
- console.log(randomItem);
- //create underscores based on length
-	for(var i =0; i < randomItem.length; i++){
-		Underscores.push('_');
-	
-	}
- //checking underscores 
- console.log(Underscores.join(" "));
+choosenword = pokemon[Math.floor(Math.random()*pokemon.length)];
 
+//checking word choose 
+console.log(choosenword);
+ //create underscores based on length
+ for(var i =0; i < choosenword.length; i++){
+ 	Underscores.push('_');
+ 	
+ 	}
  
+ 	 //checking underscores 
+ console.log(Underscores.join(" "));
 //getting keyypress 
 document.onkeyup = function(event)
 {
 	usersguess = event.key;
 	console.log(usersguess); 
-//if users guess is right 
-	if(randomItem.indexOf(usersguess) > -1) 
+	//if users guess is right 
+	if(choosenword.indexOf(usersguess) > -1) 
 	{
-	 for (var i =0; i < randomItem.length; i++)
-	 {
+		for (var i =0; i < choosenword.length; i++)
+		{
 	 	//if userguess is in the word fill in undersocres 
-	 	if(randomItem[i] === usersguess)
-	 	{
-	 		Underscores[i] = usersguess;
-	 		console.log(Underscores.join(' '));
+	 		if(choosenword[i] === usersguess)
+	 		{
+	 			Underscores[i] = usersguess;
+	 			console.log(Underscores.join(' '));
+	 			display();
+	 		if (Underscores[i] === usersguess){
+	 		rightguess++;
+	 		}
 	 	}
 	 }
 	}
-//else user is worng 	
-	else{
-		wrongguess.push(usersguess);
-		console.log(wrongguess);
-	guessesleft--;
-	console.log("guess you have left" + guessesleft);
-	}
-//if you win 
-if (Underscores ==0)
-{
-	alert("you are the pokemon master")
+			//else user is worng 	
+			else{
+			wrongguess.push(usersguess);
+			console.log(wrongguess);
+			guessesleft--;
+			display();
+			}
+}			
+
+//html var
+function display() {
+	// body...
+document.getElementById("score").innerHTML = Underscores.join(' ');
+  document.getElementById("left").innerHTML =("you have " + guessesleft + " guesses left");
+document.getElementById("lettersguessed").innerHTML = (wrongguess);
 }
-// if you lose 
-if(guessesleft == 0)
-{
-	alert("you are not the best pokemon trainer")
+
+//startgame closeing 
+
+//if you when
+if(rightguess == choosenword.length){
+	 		alert("You are The Pokemon Champion");
+	 		
+	 	}
+//if you lose 
+if(guessesleft === 0){
+	alert("You are Not The Pokemon Champion")
 }
-}
+
+document.reset();
 	
 
 
