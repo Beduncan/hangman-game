@@ -27,17 +27,14 @@
 
 //choose word randomly 
 choosenword = pokemon[Math.floor(Math.random()*pokemon.length)];
-
-//checking word choose 
-console.log(choosenword);
- //create underscores based on length
- for(var i =0; i < choosenword.length; i++){
+	//checking word choose 
+	console.log(choosenword);
+//create underscores based on length
+for(var i =0; i < choosenword.length; i++)
+{
  	Underscores.push('_');
- 	
- 	}
- 
- 	 //checking underscores 
- console.log(Underscores.join(" "));
+}	
+
 //getting keyypress 
 document.onkeyup = function(event)
 {
@@ -48,57 +45,66 @@ document.onkeyup = function(event)
 	{
 		for (var i =0; i < choosenword.length; i++)
 		{
-	 	//if userguess is in the word fill in undersocres 
-	 		if(choosenword[i] === usersguess)
-	 		{
-	 			Underscores[i] = usersguess;
-	 			console.log(Underscores.join(' '));
-	 			display();
-	 		if (Underscores[i] === usersguess){
-	 		rightguess++;
-	 		}
-	 	}
-	 }
+		 	// if userguess is in the word fill in undersocres 
+		 	if(choosenword[i] === usersguess)
+			{		
+		 	Underscores[i] = usersguess;
+		 	console.log(Underscores.join(' '));
+		 	display();
+		 	}
+		 	// if guesses is right add letter to underscores 
+		 	if (Underscores[i] === usersguess)
+		 	{
+		 		rightguess++;
+		 	}
+		}
 	}
-			//else user is worng 	
-			else{
-			wrongguess.push(usersguess);
-			console.log(wrongguess);
-			guessesleft--;
-			display();
+	
+			// else user is worng 	
+			else
+			{
+				wrongguess.push(usersguess);
+				console.log(wrongguess);
+				guessesleft--;
+				display();
 			}			
+			
 
-//html var
-function display() {
-	// body...
-document.getElementById("score").innerHTML = Underscores.join(' ');
-  document.getElementById("left").innerHTML =("you have " + guessesleft + " guesses left");
-document.getElementById("lettersguessed").innerHTML = (wrongguess);
+
+function display() 
+{
+	// geting elements from id 
+	document.getElementById("score").innerHTML = Underscores.join(' ');
+	document.getElementById("left").innerHTML =("you have " + guessesleft + " guesses left");
+	document.getElementById("lettersguessed").innerHTML = (wrongguess);
 }
 
-//startgame closeing 
 
-//if you when
-if(rightguess == choosenword.length){
-	 		alert("You are The Pokemon Champion");
-	 		
-	 	}
-//if you lose
-var go = alert 
-if(guessesleft === 0){
+function winlose()
+{	
+	//if you win	
+	if(rightguess == choosenword.length)
+	{
+		alert("You are The Pokemon Champion");	
+	}
+	 		if(rightguess == choosenword.length)
+			{
+				window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+			}
+	//if you lose
+	if(guessesleft === 0)
+	{
 	alert("You are Not The Pokemon Champion")
-}
-if (guessesleft === 0){
-	            window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+	}
+		if (guessesleft === 0)
+		{
+	    	window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+		}
+			if(rightguess == choosenword.length)
+			{
+		 		window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
+			}
 
 }
-if(rightguess == choosenword.length){
-		            window.location = 'file:///C:/Users/bdunc/OneDrive/Documents/codingbootcampwork/homework/hangman-game/hangmangamestart.html'; 
 
-}
-
-
-
-//closeingtag for keypress
-}
 
