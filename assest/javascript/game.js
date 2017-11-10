@@ -80,26 +80,30 @@ function display()
 }
 
 
-function winlose()
-{	
+	
 	//if you win	
 	if(rightguess == choosenword.length)
 	{
-		alert("You are The Pokemon Champion");	
+		alert("You are The Pokemon Champion")	
+		winlose();	
 	}
-	 		if(rightguess == choosenword.length)
-			{
-				window.location = 'https://beduncan.github.io/hangman-game/'; 
-			}
+	 		
 	//if you lose
 	if(guessesleft === 0)
 	{
 	alert("You are Not The Pokemon Champion")
-	}
-		if (guessesleft === 0)
+	winlose();
+	}	
+function winlose()
+{
+if (guessesleft === 0)
 		{
 	    	window.location = 'https://beduncan.github.io/hangman-game/'; 
 		}
+if(rightguess == choosenword.length)
+			{
+				window.location = 'https://beduncan.github.io/hangman-game/'; 
+			}
 
 }
 //onkeyclose
