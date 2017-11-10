@@ -20,7 +20,6 @@
  var usersguess = [];  
  var winC = 0;
 
-
 //choose word randomly 
 choosenword = pokemon[Math.floor(Math.random()*pokemon.length)];
 
@@ -62,8 +61,7 @@ document.onkeyup = function(event)
 			console.log(wrongguess);
 			guessesleft--;
 			display();
-			}
-}			
+			}			
 
 //html var
 function display() {
@@ -85,8 +83,7 @@ if(guessesleft === 0){
 	alert("You are Not The Pokemon Champion")
 }
 
-document.reset();
-	
 
-
+//closeingtag for keypress
+}
 
