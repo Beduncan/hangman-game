@@ -89,7 +89,7 @@ function winlose()
 	}
 	 		if(rightguess == choosenword.length)
 			{
-				window.location = 'hangman-game/hangmangamestart.html'; 
+				window.location = 'https://beduncan.github.io/hangman-game/'; 
 			}
 	//if you lose
 	if(guessesleft === 0)
@@ -98,12 +98,8 @@ function winlose()
 	}
 		if (guessesleft === 0)
 		{
-	    	window.location = 'hangman-game/index.html'; 
+	    	window.location = 'https://beduncan.github.io/hangman-game/'; 
 		}
-			if(rightguess == choosenword.length)
-			{
-		 		window.location = 'hangman-game/hangmangamestart.html'; 
-			}
 
 }
 
